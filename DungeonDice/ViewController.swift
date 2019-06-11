@@ -17,35 +17,37 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func randomRoll(die: Int) {
+        let diceRoll = Int.random(in: 1...die)
+        dieRoll.text = "You rolled a \(die)-sided die and got a " + String(diceRoll)
+    }
+    
     @IBAction func fourSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...4)
-        dieRoll.text = "You rolled a 4-sided die and got a " + String(diceRoll)
+        randomRoll(die: 4)
     }
 
     @IBAction func sixSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...6)
-        dieRoll.text = "You rolled a 6-sided die and got a " + String(diceRoll)
+        randomRoll(die: 6)
     }
     
     @IBAction func eightSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...8)
-        dieRoll.text = "You rolled a 8-sided die and got a " + String(diceRoll)
+        randomRoll(die: 8)
     }
+    
     @IBAction func tenSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...10)
-        dieRoll.text = "You rolled a 10-sided die and got a " + String(diceRoll)
+        randomRoll(die: 10)
     }
+    
     @IBAction func twelveSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...12)
-        dieRoll.text = "You rolled a 12-sided die and got a " + String(diceRoll)
+        randomRoll(die: 12)
     }
+    
     @IBAction func twentySidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...20)
-        dieRoll.text = "You rolled a 20-sided die and got a " + String(diceRoll)
+        randomRoll(die: 20)
     }
+    
     @IBAction func hundredSidedDiePressed(_ sender: UIButton) {
-        let diceRoll = Int.random(in: 1...100)
-        dieRoll.text = "You rolled a 100-sided die and got a " + String(diceRoll)
+        randomRoll(die: 100)
     }
 }
 
